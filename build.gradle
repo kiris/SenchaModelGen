@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'eu.appsatori:gradle-fatjar-plugin:0.2-rc1'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'fatjar'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  // compile group: "org.projectlombok", name: "lombok", version: "0.11.8"
+  compile group: "com.github.jknack", name: "handlebars", version: "1.0.0"
+
+  testCompile 'junit:junit:4.8.2'
+}
+
+
+defaultTasks 'build'
